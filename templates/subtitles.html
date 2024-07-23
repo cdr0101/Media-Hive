@@ -13,7 +13,7 @@
             <ul>
                 <li><a href="/download">Download YouTube Videos</a></li>
                 <li><a href="/convert">Convert Video to Audio</a></li>
-                <li><a href="/subtitles">Insert Subtitles to Video</a></li>
+                <li><a href="/subtitles">Insert Subtitles into Video</a></li>
             </ul>
         </nav>
     </header>
@@ -23,14 +23,14 @@
             <h1>SUBTITLES GENERATOR</h1>
         </div>
         
-        <h2 align="center">Insert subtitles to your videos.</h2>
+        <h2 align="center">Insert subtitles into your videos.</h2>
 
         <section id="convert-section" class="feature-section">
             <div id="upload-video" class="tab-content active">
                 <h2>Drag and drop or choose the video file you want to add subtitles to.</h2>
                 <form id="convert-videoform" action="{{ url_for('subtitles_video') }}" method="POST" enctype="multipart/form-data">
                     <input type="file" id="video" name="video" accept="video/mp4" required>
-                    <button type="submit">Convert</button>
+                    <button type="submit">Process</button>
                 </form>
                 <h3>The process may take some time. Please wait.</h3>
             
