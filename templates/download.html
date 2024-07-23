@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediaHive- YouTube Video Downloader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="/" style="text-decoration: none; color: #DEF2F1;">Media Hive</a></div>
+            <ul>
+                <li><a href="/download">Download YouTube Videos</a></li>
+                <li><a href="/convert">Convert Video to Audio</a></li>
+                <li><a href="/subtitles">Insert Subtitles to Video</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="heading">
+            <h1>YOUTUBE VIDEO DOWNLOADER</h1>
+        </div>
+
+        <section id="download-section" class="feature-section">
+            <h2>Enter the URL of the YouTube video you want to download.</h2>
+            <form id="download-form" action="/process-url" method="POST">
+                <input type="text" id="youtube-url" name="youtube-url" value="" placeholder="Enter URL" required>
+                <button type="submit">Download</button>
+            </form>
+            <p>Downloading may take some time. Please wait.</p>
+            {% if message %}
+            <p>{{ message }}</p>
+            {% endif %}
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Media Hive. All rights reserved.</p>
+    </footer>
+</body>
+</html>

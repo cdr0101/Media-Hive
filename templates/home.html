@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Hive</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="/" style="text-decoration: none; color: #DEF2F1;">Media Hive</a></div>
+            <ul>
+                <li><a href="/download">Download YouTube Videos</a></li>
+                <li><a href="/convert">Convert Video to Audio</a></li>
+                <li><a href="/subtitles">Insert Subtitles to Video</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Welcome to Media Hive</h1>
+            <p>Download , Convert , Caption!</p>
+            <div class="hero-buttons">
+                <a href="/download" class="button">Download YouTube Videos</a>
+                <a href="/convert" class="button">Convert Video to Audio</a>
+                <a href="/subtitles" class="button">Insert Subtitles to Video</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Media Hive. All rights reserved.</p>
+    </footer>
+</body>
+</html>

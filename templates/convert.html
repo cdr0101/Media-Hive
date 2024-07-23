@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediaHive - Video to Audio Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="/" style="text-decoration: none; color: #DEF2F1;">Media Hive</a></div>
+            <ul>
+                <li><a href="/download">Download YouTube Videos</a></li>
+                <li><a href="/convert">Convert Video to Audio</a></li>
+                <li><a href="/subtitles">Insert Subtitles to Video</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="heading">
+            <h1>VIDEO (mp4) TO AUDIO (mp3) CONVERTER</h1>
+        </div>
+
+        <section id="convert-section" class="feature-section">
+            <div class="tabs">
+                <div class="tab-button active" data-tab="upload-video">Upload Video</div>
+                <div class="tab-button" data-tab="youtube-link">Use YouTube Link</div>
+            </div>
+
+            <div id="upload-video" class="tab-content active">
+                <h2>Drag and drop or choose the video file you want to convert to audio.</h2>
+                <form id="convert-videoform" action="{{ url_for('convert_video') }}" method="POST" enctype="multipart/form-data">
+                    <input type="file" id="video" name="convert-video" accept="video/mp4" required>
+                    <button type="submit">Convert</button>
+                </form>
+                <h3>The process may take some time. Please wait.</h3>
+            </div>
+
+            <div id="youtube-link" class="tab-content">
+                <h2>Enter the URL of the YouTube video you want to convert to audio.</h2>
+                <form id="convert-form" action="{{ url_for('convert_url') }}" method="POST">
+                    <input type="text" id="url" name="youtube-url" value="" placeholder="Enter URL" required>
+                    <button type="submit">Convert</button>
+                </form>
+                <h3>The process may take some time. Please wait.</h3>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Media Hive. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // handling tab switching
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+                button.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

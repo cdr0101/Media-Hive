@@ -1,0 +1,293 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body,html{
+    height: 100%;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #EEE2DC;
+    line-height: 1.6;
+    background: radial-gradient(circle, hsla(177, 50%, 46%, 1) 0%, hsla(178, 48%, 32%, 1) 68%);
+}
+
+header {
+    background: #1C3334;
+    color: #DEF2F1;
+    padding: 0.5rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #DEF2F1;
+}
+
+nav ul {
+    font-size: 20px;
+    font-weight: bold;
+    list-style: none;
+    display: flex;
+    gap: 40px; /* Space between list items */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #def2f1;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 7px 7px;
+}
+
+nav ul li a:hover {
+    /* border: 4px solid #08b87a; */
+    border-radius: 120px;
+    color: #f0ebf4;
+    background: radial-gradient(circle, hsla(177, 58%, 52%, 1) 8%, hsla(177, 50%, 46%, 1) 50%);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#hero {
+    text-align: center;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hero-buttons .button {
+    padding: 10px 20px;
+    background: #1C3334;
+    border-radius: 30px;
+    color: #DEF2F1;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.hero-buttons .button:hover {
+    border: 2.8px solid #1C3334;
+    border-radius: 40px;
+    background: radial-gradient(circle, hsla(177, 58%, 52%, 1) 8%, hsla(177, 50%, 46%, 1) 50%);
+}
+
+footer {
+    text-align: center;
+    padding: 8px;
+    background: #1C3334;
+    color: #DEF2F1;
+    font-size: 18px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+/* for download.html */
+.heading{
+    color: #1C3334;
+    font-weight: bold;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+#download-section {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+#download-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #DEF2F1;
+}
+#download-section p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #1C3334;
+    font-weight: bolder;
+}
+
+#download-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+#download-form input {
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 4px solid #1C3334;
+    border-radius: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+#download-form button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #DEF2F1;
+    background: #1C3334;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#download-form button:hover {
+    border: 2.8px solid #1C3334;
+    border-radius: 40px;
+    background: radial-gradient(circle, hsla(177, 58%, 52%, 1) 8%, hsla(177, 50%, 46%, 1) 50%);
+}
+
+/* for convert.html */
+.tabs {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.tab-button {
+    padding: 7px;
+    margin-right: 0;
+    background-color: #1C3334;
+    border: 3px solid #DEF2F1;
+    border-radius: 2px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.tab-button.active {
+    background: radial-gradient(circle, hsla(177, 58%, 52%, 1) 8%, hsla(177, 50%, 46%, 1) 50%);
+}
+.tab-content {
+    display: none;
+    padding: 11px;
+    border: 3px solid #1C3334;
+    border-radius: 5px;
+    margin-top: 5px;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+}
+.tab-content.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#convert-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content:flex-start;
+}
+
+#convert-form input {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 4px solid #1C3334;
+    border-radius: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+#convert-form button {
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #DEF2F1;
+    background: #1C3334;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#convert-form button:hover {
+    border: 2.8px solid #1C3334;
+    border-radius: 40px;
+    background: radial-gradient(circle, hsla(177, 58%, 52%, 1) 8%, hsla(177, 50%, 46%, 1) 50%);
+}
+
+#convert-videoform input {
+    padding: 4px 2px 4px 18px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 0;
+    width: 70%;
+    max-width: 500px;
+    text-align: center;
+}
+
+#convert-videoform button {
+    padding: 5px 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #DEF2F1;
+    background: #1C3334;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-left: 10px;
+}
+
+#convert-videoform button:hover {
+    border: 2.8px solid #1C3334;
+    border-radius: 40px;
+    background: radial-gradient(circle, hsla(177, 58%, 52%, 1) 8%, hsla(177, 50%, 46%, 1) 50%);
+}
