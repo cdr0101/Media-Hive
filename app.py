@@ -222,4 +222,4 @@ def subtitles_video():
     return send_file(output_video_path, as_attachment=True, download_name=f"subtitled_{video_file.filename}")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False, host='0.0.0.0')
